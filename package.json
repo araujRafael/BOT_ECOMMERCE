@@ -1,0 +1,16 @@
+{
+  "name": "template-node-javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "araujRafael <araujodiniz1994@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node src/app.js",
+    "build": "",
+    "start": ""
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "puppeteer": "^11.0.0"
+  }
+}

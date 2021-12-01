@@ -176,6 +176,11 @@
   "resolved" "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz"
   "version" "2.0.4"
 
+"json-stringify-safe@^5.0.1":
+  "integrity" "sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus="
+  "resolved" "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz"
+  "version" "5.0.1"
+
 "locate-path@^5.0.0":
   "integrity" "sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g=="
   "resolved" "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz"
@@ -290,6 +295,20 @@
     "tar-fs" "2.1.1"
     "unbzip2-stream" "1.4.3"
     "ws" "8.2.3"
+
+"random-seed@^0.3.0":
+  "integrity" "sha1-2UXy4fOPSejViRNDG4v2u5N1Vs0="
+  "resolved" "https://registry.npmjs.org/random-seed/-/random-seed-0.3.0.tgz"
+  "version" "0.3.0"
+  dependencies:
+    "json-stringify-safe" "^5.0.1"
+
+"random-useragent@^0.5.0":
+  "integrity" "sha512-FUMkqVdZeoSff5tErNL3FFGYXElDWZ1bEuedhm5u9MdCFwANriJWbHvDRYrLTOzp/fBsBGu5J1cWtDgifa97aQ=="
+  "resolved" "https://registry.npmjs.org/random-useragent/-/random-useragent-0.5.0.tgz"
+  "version" "0.5.0"
+  dependencies:
+    "random-seed" "^0.3.0"
 
 "readable-stream@^3.1.1", "readable-stream@^3.4.0":
   "integrity" "sha512-BViHy7LKeTz4oNnkcLJ+lVSL6vpiFeX6/d3oSH8zCW7UxP2onchk+vTGB143xuFjHS3deTgkKoXXymXqymiIdA=="

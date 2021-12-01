@@ -1,9 +1,12 @@
 const puppeteer = require("puppeteer");
 const dotenv = require("dotenv");
 dotenv.config();
+const randomUseragent = require('random-useragent');
 
 //***************************** QUERYS n PATHS ****************************
-const MOZILA_USER_AGENT = process.env.USER_AGENT
+const MOZILA_USER_AGENT = randomUseragent.getRandom(function (ua) {
+  return ua.browserName === 'Firefox';
+});
 const USERNAME = process.env.AMAZON_USERNAME
 const PASSWORD = process.env.AMAZON_PASSWORD
 const TARGET_SEARCH = process.env.AMAZON_TARGET_SEARCH

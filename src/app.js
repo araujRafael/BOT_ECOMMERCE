@@ -96,7 +96,6 @@ const app = async () => {
   }).then(data => OBJ_PRODUCTS=data,)
   const objLeng= Object.keys(OBJ_PRODUCTS).length
   console.log(OBJ_PRODUCTS,`✔️ Finish => ${objLeng} Products scraped`);
-  // a pagina tem um total de 60 itens mas a raspagem está vindo menos
-  // await browser.close()
+  await browser.close()
 };
 app();

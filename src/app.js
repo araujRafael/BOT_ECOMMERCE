@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const randomUseragent = require('random-useragent');
 
-//***************************** QUERYS n PATHS ****************************
+//******************************* CONFIGS *********************************
 const MOZILA_USER_AGENT = randomUseragent.getRandom(function (ua) {
   return ua.browserName === 'Firefox';
 });
@@ -20,7 +20,7 @@ const app = async () => {
   await page.setUserAgent(MOZILA_USER_AGENT)
   await page.goto("https://www.amazon.com.br/");
 
-  console.log('⌨️ Enter login page...');
+  console.log('⌨️ => Enter login page...');
   let goToLink;
   await page
     .evaluate(() => {
@@ -34,7 +34,7 @@ const app = async () => {
   await page.goto(goToLink);
   
 
-  console.log('⌨️ Enter username...');
+  console.log('⌨️ => Enter username...');
   await page.waitForSelector("#ap_email");
   await page.type("#ap_email", USERNAME, {
     delay: 60,
@@ -43,7 +43,7 @@ const app = async () => {
     console.log('🟢 Username => OK');
   })
 
-  console.log('⌨️ Enter password...');
+  console.log('⌨️ => Enter password...');
   await page.waitForSelector("#ap_password");
   await page.type("#ap_password", PASSWORD, {
     delay: 60,
@@ -52,7 +52,7 @@ const app = async () => {
     console.log('🟢 Password => OK');
   })
   
-  console.log('⌨️ Search target products...');
+  console.log('⌨️ => Search target products...');
   await page.waitForSelector("#twotabsearchtextbox");
   await page.type("#twotabsearchtextbox", TARGET_SEARCH, {
     delay: 60,
@@ -60,9 +60,10 @@ const app = async () => {
     await page.keyboard.press("Enter");
     console.log('🟢 Target products => OK');
   })
-  console.log('⌨️ Performing scraping of products...');
+  console.log('⌨️ => Performing scraping of products...');
   await page.waitForNavigation()
   await page.waitForSelector(ALL_PRODUCTS_ARRAY)
+  // create a function with this =>
   let OBJ_PRODUCTS;
   await page.evaluate(()=> {
     // Querys 
